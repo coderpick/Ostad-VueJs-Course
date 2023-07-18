@@ -1,114 +1,383 @@
 <script setup>
-
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+import bannerContent from "./data/bannerContent"
+import clients from "./data/clients"
+import weDoes from "./data/weDoes"
+import teams from "./data/teams"
 </script>
 
 <template>
-  
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <section class="bg-white dark:bg-gray-900">
-      <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div class="mr-auto place-self-center lg:col-span-7">
-              <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-              <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-              <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                  Get started
-                  <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </a>
-              <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                  Speak to Sales
-              </a> 
-          </div>
-          <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
-          </div>                
-      </div>
-  </section>
-
-  <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="max-w-screen-md mb-8 lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>
-            <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-        </div>
-        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+    <Navbar />
+    <!-- banner section start -->
+    <section class="w-full  bg-gradient-to-r from-green-400 to-blue-500 min-h-full pt-16">
+        <div class="container m-auto">
+            <div class="grid lg:grid-cols-2 gap-4">
+                <div class="">
+                    <div class="py-40">
+                        <h1 class="text-6xl text-blue-600 leading-tight" v-html="bannerContent.title"></h1>
+                        <p class="text-white text-xl py-5">{{ bannerContent.paragraph }}</p>
+                        <a class="text-xl text-white border border-emerald-50 py-4 px-7 mt-6 inline-block rounded hover:bg-blue-700 hover:border-blue-700 font-medium uppercase"
+                            href="#">{{ bannerContent.btnText }}</a>
+                    </div>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
-                <p class="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
-            </div>
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                <div class="flex items-center">
+                    <img class="slogan-img" :src="bannerContent.featureImg" alt="">
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Legal</h3>
-                <p class="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
-            </div>
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>                    
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
-                <p class="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
-            </div>
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Finance</h3>
-                <p class="text-gray-500 dark:text-gray-400">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
-            </div>
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Enterprise Design</h3>
-                <p class="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
-            </div>
-            <div>
-                <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Operations</h3>
-                <p class="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
             </div>
         </div>
-    </div>
-  </section>
+    </section>
+    <!-- banner section end -->
+    <!-- client section start -->
+    <section class="bg-slate-200 w-full py-14">
+        <div class="container m-auto">
+            <div class="flex flex-wrap justify-center py-6">
+                <h1 class="text-blue-800 text-3xl">Trusted By The Best Clients</h1>
+            </div>
+            <div class="flex justify-between py-6">
+                <div v-for="(item, index) in clients" :key="index"><img class="h-[34px]" :src="item" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <!-- client section end -->
+    <!-- what we do start -->
+    <section class="bg-white w-full py-14" id="weDo">
+        <div class="container m-auto">
+            <div class="flex justify-center py-6">
+                <h1 class="text-blue-800 text-3xl">What We Do</h1>
+            </div>
+            <div class="grid grid-cols-3 gap-6 py-6">
+                <div class="text-center px-4 border p-5 hover:shadow-md rounded">
+                    <img :src="weDoes[0].icon" class="inline-block py-3" alt="">
+                    <h2 class="text-2xl py-5 text-blue-900">{{ weDoes[0].title }}</h2>
+                    <p>{{ weDoes[0].para }}</p>
+                    <a href="" class="text-blue-600 mt-5 inline-block">Learn more</a>
+                </div>
+                <div class="text-center px-4 border p-5 hover:shadow-md rounded">
+                    <img :src="weDoes[1].icon" class="inline-block py-3" alt="">
+                    <h2 class="text-2xl py-5 text-blue-900">{{ weDoes[1].title }}</h2>
+                    <p>{{ weDoes[1].para }}</p>
+                    <a href="" class="text-blue-600 mt-5 inline-block">Learn more</a>
+                </div>
+                <div class="text-center px-4 border p-5 hover:shadow-md rounded">
+                    <img :src="weDoes[2].icon" class="inline-block py-3" alt="">
+                    <h2 class="text-2xl py-5 text-blue-900">{{ weDoes[2].title }}</h2>
+                    <p>{{ weDoes[2].para }}</p>
+                    <a href="" class="text-blue-600 mt-5 inline-block">Learn more</a>
+                </div>
 
+            </div>
+        </div>
+    </section>
+    <!-- what we do end -->
+    <!-- pricing section start -->
+    <section class="bg-[#0a007e] w-full py-14" id="pricing">
+        <div class="container m-auto">
+            <div class="flex justify-center py-6">
+                <h1 class="text-slate-400 text-3xl">Our Reliable Pricing</h1>
+            </div>
+
+            <div class="flex justify-center py-6">
+                <h1 class="max-w-4xl text-center leading-snug text-white text-5xl font-bold">We build <span
+                        class="text-[#00ffd4]">reliable infrastructure</span>, use comprehensive in-house tools.</h1>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2 lg:grid-cols-3 place-items-center py-6">
+                <!-- single price item start -->
+                <div
+                    class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">PRO</h5>
+                    <div class="flex items-baseline text-gray-900 dark:text-white">
+                        <span class="text-3xl font-semibold">$</span>
+                        <span class="text-5xl font-extrabold tracking-tight">49</span>
+                        <span class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <ul role="list" class="space-y-5 my-7">
+                        <li class="flex space-x-3 items-center">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">2 team
+                                members</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">20GB Cloud
+                                storage</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Integration
+                                help</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Sketch Files</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">API Access</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Complete documentation</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email
+                                support</span>
+                        </li>
+                    </ul>
+                    <button type="button"
+                        class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose
+                        plan</button>
+                </div><!-- single price item end -->
+                <!-- single price item start -->
+                <div
+                    class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">PREMIUM</h5>
+                    <div class="flex items-baseline text-gray-900 dark:text-white">
+                        <span class="text-3xl font-semibold">$</span>
+                        <span class="text-5xl font-extrabold tracking-tight">99</span>
+                        <span class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <ul role="list" class="space-y-5 my-7">
+                        <li class="flex space-x-3 items-center">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">2 team
+                                members</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">20GB Cloud
+                                storage</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Integration
+                                help</span>
+                        </li>
+                        <li class="flex space-x-3 decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Sketch Files</span>
+                        </li>
+                        <li class="flex space-x-3 decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">API Access</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Complete documentation</span>
+                        </li>
+                        <li class="flex space-x-3 line-through decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email
+                                support</span>
+                        </li>
+                    </ul>
+                    <button type="button"
+                        class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose
+                        plan</button>
+                </div><!-- single price item end -->
+                <!-- single price item start -->
+                <div
+                    class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">ENTERPRISE</h5>
+                    <div class="flex items-baseline text-gray-900 dark:text-white">
+                        <span class="text-3xl font-semibold">$</span>
+                        <span class="text-5xl font-extrabold tracking-tight">199</span>
+                        <span class="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <ul role="list" class="space-y-5 my-7">
+                        <li class="flex space-x-3 items-center">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">2 team
+                                members</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">20GB Cloud
+                                storage</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Integration
+                                help</span>
+                        </li>
+                        <li class="flex space-x-3  decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Sketch Files</span>
+                        </li>
+                        <li class="flex space-x-3  decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">API Access</span>
+                        </li>
+                        <li class="flex space-x-3  decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">Complete documentation</span>
+                        </li>
+                        <li class="flex space-x-3  decoration-gray-500">
+                            <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-gray-500" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            <span class="text-base font-normal leading-tight text-gray-500">24×7 phone & email
+                                support</span>
+                        </li>
+                    </ul>
+                    <button type="button"
+                        class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose
+                        plan</button>
+                </div><!-- single price item end -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- pricing section end -->
+    <!-- team section start -->
+    <section class="bg-slate-200 w-full py-14" id="ourTeam">
+        <div class="container m-auto">
+            <div class="flex justify-center py-6">
+                <h1 class="text-blue-900 text-4xl font-bold">Meet Our Team</h1>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-12 lg:grid-cols-3 place-items-center py-6">
+
+                <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="w-full rounded" :src="teams[0].profileImg" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <h1 class="text-2xl text-indigo-700">{{ teams[0].name }}</h1>
+                        <h3 class="text-gray-600 py-2">{{ teams[0].designation }}</h3>
+                    </div>
+                </div>
+
+
+                <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="w-full rounded" :src="teams[1].profileImg" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <h1 class="text-2xl text-indigo-700">{{ teams[1].name }}</h1>
+                        <h3 class="text-gray-600 py-2">{{ teams[1].designation }}</h3>
+                    </div>
+                </div>
+
+                <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="w-full rounded" :src="teams[2].profileImg" alt="" />
+                    </a>
+                    <div class="p-5 text-center">
+                        <h1 class="text-2xl text-indigo-700">{{ teams[2].name }}</h1>
+                        <h3 class="text-gray-600 py-2">{{ teams[2].designation }}</h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- team section end -->
+
+    <!-- openSource Section start -->
+    <section class="bg-white w-full py-14">
+        <div class="container m-auto">
+            <div class="flex justify-center py-6">
+                <h1 class="text-blue-900 text-3xl underline">We love Open Source</h1>
+            </div>
+            <div class="py-4 text-center">
+                <div class="flex justify-center ">
+                    <img src="../assets/img/open-source.svg" alt="">
+                </div>
+                <h1 class="text-6xl py-5 text-gray-700 font-bold">We're making <br> Open Source Software</h1>
+                <a href="" class="text-xl py-4 px-5 mt-6 inline-block border border-gray-400 rounded">Follow us on
+                    Github</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- openSource Section end -->
+    <Footer />
 </template>
 
 <style scoped></style>
